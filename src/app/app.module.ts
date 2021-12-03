@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 import { ClassStyleComponent } from './class-style/class-style.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TwoWayBindngComponent } from './two-way-bindng/two-way-bindng.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent,PropertybindingComponent,ClassStyleComponent,EventBindingComponent],
+  declarations: [ AppComponent, HelloComponent,PropertybindingComponent,ClassStyleComponent,EventBindingComponent,TwoWayBindngComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
