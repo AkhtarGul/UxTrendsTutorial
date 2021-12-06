@@ -8,10 +8,11 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
 import { ClassStyleComponent } from './class-style/class-style.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindngComponent } from './two-way-bindng/two-way-bindng.component';
+import { NgswtichComponent } from './ngswtich/ngswtich.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent,PropertybindingComponent,ClassStyleComponent,EventBindingComponent,TwoWayBindngComponent],
+  declarations: [ AppComponent, HelloComponent,PropertybindingComponent,ClassStyleComponent,EventBindingComponent,TwoWayBindngComponent,NgswtichComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
