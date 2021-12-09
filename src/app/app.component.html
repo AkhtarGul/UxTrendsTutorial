@@ -14,16 +14,28 @@
   <nav>
     <ul class="nav nav-tabs">
       <li class="nav-item">
-        <a class="nav-link active" routerLink="/">Home</a>
+        <a
+          class="nav-link"
+          routerLinkActive="active"
+          routerLink="/"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Home</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About Us</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/about"
+          >About Us</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/product">Products</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/product"
+          >Products</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/contact">Contact Us</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/contact"
+          >Contact Us</a
+        >
       </li>
     </ul>
   </nav>
