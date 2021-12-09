@@ -1,14 +1,31 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
-My App is {{appState? on:off}}
-<app-propertybinding></app-propertybinding>
+<p>Start editing to see some magic happen :)</p>
+<!-- My App is {{appState? on:off}} -->
+<!-- <app-propertybinding></app-propertybinding> -->
 
-<br>
+<br />
 <!-- <app-class-style></app-class-style>
 <br>
 <app-event-binding></app-event-binding>
 <br>
 <app-two-way-bindng></app-two-way-bindng> -->
-<app-ngswtich></app-ngswtich>
+<!-- <app-ngswtich></app-ngswtich> -->
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/product">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
