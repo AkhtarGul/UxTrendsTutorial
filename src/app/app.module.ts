@@ -14,12 +14,33 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, RouterOutlet, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { WatchComponent } from './product/watch/watch.component';
+import { ShowComponent } from './product/show/show.component';
+import { CameraComponent } from './product/camera/camera.component';
+import { CycleComponent } from './product/cycle/cycle.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'product', component: ProductComponent },
+  {
+    path: 'product',
+    children: [
+      {
+        path: '',
+        component: ProductComponent,
+      },
+      { path: 'watch', component: WatchComponent },
+      { path: 'show', component: ShowComponent },
+      { path: 'camera', component: CameraComponent },
+      { path: 'cycle', component: CycleComponent },
+    ],
+  },
   { path: 'contact', component: ContactComponent },
+  { path: '**', component: PagenotfoundComponent },
 ];
 @NgModule({
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
@@ -35,6 +56,12 @@ const routes: Routes = [
     ContactComponent,
     AboutComponent,
     HomeComponent,
+    LoginComponent,
+    PagenotfoundComponent,
+    WatchComponent,
+    ShowComponent,
+    CameraComponent,
+    CycleComponent,
   ],
   bootstrap: [AppComponent],
 })
